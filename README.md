@@ -1,4 +1,4 @@
-# MD Mecanizados CNC · Web corporativa
+# MD MECANIZADOS CNC S.L. · Web corporativa
 
 Web corporativa orientada a empresas (B2B) para un taller de mecanizado de precisión en Móstoles (Madrid).
 Presenta los servicios de mecanizado CNC, medición 3D por láser, verificación con MMC, soldadura e ingeniería de desarrollo de producto.

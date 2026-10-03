@@ -1,5 +1,5 @@
 /* =========================================================
-   MD Mecanizados CNC · Hoja de estilos principal
+   MD MECANIZADOS CNC S.L. · Hoja de estilos principal
    ========================================================= */
 
 /* Fuentes Barlow y Barlow Condensed (SIL Open Font License), alojadas localmente. Subconjunto latino. */
@@ -173,7 +173,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .header.is-scrolled { box-shadow: var(--shadow-sm); }
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 20px; }
 
-.brand { display: inline-flex; align-items: center; gap: 12px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .brand__mark {
   display: grid; place-items: center; width: 46px; height: 46px; border-radius: 8px;
   background: linear-gradient(135deg, var(--steel), var(--ink)); color: #fff;
@@ -182,7 +182,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .brand__mark::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--accent); }
 .brand__text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand__text strong { font-family: var(--font-head); font-size: 1.35rem; color: var(--ink); font-weight: 700; letter-spacing: .3px; }
+.brand__text strong { font-family: var(--font-head); font-size: 1.35rem; color: var(--ink); font-weight: 700; letter-spacing: .3px; white-space: nowrap; }
 .brand__text small { font-size: .74rem; color: var(--muted); letter-spacing: 1.4px; text-transform: uppercase; }
 .brand--light .brand__text strong { color: #fff; }
 .brand--light .brand__text small { color: var(--muted-light); }
@@ -421,6 +421,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .contact { background: var(--ink); color: #d6dee6; position: relative; }
 .contact::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 85% 10%, rgba(242, 106, 27, .16), transparent 45%); pointer-events: none; }
 .contact__grid { position: relative; display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: start; }
+.contact__grid > *, .contact__list li > div { min-width: 0; }
 .contact__info h2 { color: #fff; }
 .contact__info > p { color: var(--muted-light); font-size: 1.1rem; }
 .contact__list { display: grid; gap: 14px; margin: 30px 0; }
@@ -507,7 +508,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 /* =========================================================
    Responsive
    ========================================================= */
-@media (max-width: 1520px) {
+/* Con el menú completo visible, el teléfono de cabecera se muestra solo como icono (el número está en la barra superior) */
+@media (min-width: 1201px) {
   .header__phone span { display: none; }
 }
 @media (max-width: 1340px) {
@@ -612,5 +614,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 @media (max-width: 380px) {
   .topbar__contact li:first-child { display: none; }
+  .brand { gap: 9px; }
+  .brand__mark { width: 36px; height: 36px; font-size: 1.05rem; }
+  .brand__text strong { font-size: 1.04rem; }
+  .brand__text small { font-size: .58rem; letter-spacing: .6px; }
   .checks { grid-template-columns: 1fr; }
 }

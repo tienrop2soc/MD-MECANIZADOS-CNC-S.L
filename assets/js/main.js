@@ -1,4 +1,4 @@
-/* MD Mecanizados CNC · Interacciones de la web */
+/* MD MECANIZADOS CNC S.L. · Interacciones de la web */
 (function () {
   'use strict';
 
